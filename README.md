@@ -9,7 +9,7 @@
 # Assignment Overview
 Please add a paragraph or two overviewing the objectives of the assignment.
 
-# GitHub Repository Link:
+# GitHub Repository Link
 https://github.com/pd03-cs-665/cs-665-assignment-{ASSIGNMENT_NUMBER}
 
 # Implementation Description 
@@ -106,7 +106,3 @@ mvn checkstyle:checkstyle
 
 The HTML page will be found at the following location:
 `target/site/checkstyle.html`
-
-
-
-

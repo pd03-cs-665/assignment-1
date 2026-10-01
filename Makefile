@@ -11,3 +11,6 @@ check:
 
 style:
 	mvn checkstyle:check
+
+submit:
+	git archive -o "$$(basename "$$PWD").zip" HEAD

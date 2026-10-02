@@ -30,14 +30,14 @@ public abstract class Beverage {
         return sugarLevel;
     }
 
-    public void updateMilkLevel(int milkLevel) {
+    public void setMilkLevel(int milkLevel) {
         if (milkLevel < 0 || milkLevel > 3 ) {
             throw new IllegalArgumentException("milkLevel needs to be between 0-3");
         }
         this.milkLevel = milkLevel;
     }
 
-    public void updateSugarLevel(int sugarLevel) {
+    public void setSugarLevel(int sugarLevel) {
         if (sugarLevel < 0 || sugarLevel > 3 ) {
             throw new IllegalArgumentException("sugarLevel needs to be between 0-3");
         }

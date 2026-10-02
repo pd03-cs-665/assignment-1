@@ -1,4 +1,4 @@
-package edu.bu.met.cs665.Beverage;
+package edu.bu.met.cs665.beverage;
 
 public abstract class Beverage {
     private double cost;

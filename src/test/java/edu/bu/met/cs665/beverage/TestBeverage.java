@@ -4,63 +4,72 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
-import edu.bu.met.cs665.beverage.coffee.Americano;
-
 public class TestBeverage {
-    public TestBeverage() {}
+    public TestBeverage() {};
+
+    private static class MockBeverage extends Beverage {
+        public MockBeverage() {
+            setCost(1200);
+        }
+
+        @Override
+        public String getDescription() {
+            return "Mock Beverage";
+        }
+    };
 
     @Test
     public void testGetCostBaseSuccess() {
-        Americano americano = new Americano();
-        double expectedCost = 1.25;
-        assertEquals(expectedCost, americano.getCost(), 0.001);
+        MockBeverage mockBeverage = new MockBeverage();
+        double expectedCost = 1200;
+        assertEquals(expectedCost, mockBeverage.getCost(), 0.001);
     }
 
     @Test
     public void testGetCostMilkSuccess() {
-        Americano americano = new Americano();
-        americano.setMilkLevel(3);
-        double expectedCost = 2.75;
-        assertEquals(expectedCost, americano.getCost(), 0.001);
+        MockBeverage mockBeverage = new MockBeverage();
+        mockBeverage.setMilkLevel(3);
+        double expectedCost = 1200 + (3*0.5);
+        assertEquals(expectedCost, mockBeverage.getCost(), 0.001);
     }
 
     @Test
     public void testSetCostSuccess() {
-        Americano americano = new Americano();
-        americano.setCost(100);
+        MockBeverage mockBeverage = new MockBeverage();
+        mockBeverage.setCost(100);
         double expectedCost = 100;
-        assertEquals(expectedCost, americano.getCost(), 0.001);
+        assertEquals(expectedCost, mockBeverage.getCost(), 0.001);
     }
 
     @Test(expected=IllegalArgumentException.class)
     public void testSetCostFail() {
-        Americano americano = new Americano();
-        americano.setCost(-2222);
+        MockBeverage mockBeverage = new MockBeverage();
+        mockBeverage.setCost(-2222);
     }
 
     @Test
     public void testSetMilkLevelSuccess() {
-        Americano americano = new Americano();
-        americano.setMilkLevel(2);
-        assertEquals(2, americano.getMilkLevel());
+        MockBeverage mockBeverage = new MockBeverage();
+        mockBeverage.setMilkLevel(2);
+        assertEquals(2, mockBeverage.getMilkLevel());
     }
 
     @Test(expected=IllegalArgumentException.class)
     public void testSetMilkLevelFail() {
-        Americano americano = new Americano();
-        americano.setMilkLevel(10);
+        MockBeverage mockBeverage = new MockBeverage();
+        mockBeverage.setMilkLevel(10);
     }
 
     @Test
     public void testSetSugarLevelSuccess() {
-        Americano americano = new Americano();
-        americano.setSugarLevel(2);
-        assertEquals(2, americano.getSugarLevel());
+        MockBeverage mockBeverage = new MockBeverage();
+        mockBeverage.setSugarLevel(2);
+        assertEquals(2, mockBeverage.getSugarLevel());
     }
 
     @Test(expected=IllegalArgumentException.class)
     public void testSetSugarLevelFail() {
-        Americano americano = new Americano();
-        americano.setSugarLevel(10);
+        MockBeverage mockBeverage = new MockBeverage();
+        mockBeverage.setSugarLevel(10);
     }
 }

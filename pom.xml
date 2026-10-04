@@ -161,7 +161,7 @@
                     of "mvn site" -->
                 <configuration>
                     <configLocation>config/google_checks.xml</configLocation>
-                    <failOnViolation>false</failOnViolation>
+                    <failOnViolation>true</failOnViolation>
                     <consoleOutput>true</consoleOutput>
                 </configuration>
             </plugin>

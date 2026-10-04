@@ -28,7 +28,9 @@ public abstract class Beverage {
      * @return Current beverage cost.
      */
     public double getCost() {
-        return this.cost + (MILK_COST * this.milkLevel) + (SUGAR_COST * this.sugarLevel);
+        // Calculate total using base cost and how much milk and sugar is added
+        double totalCost = this.cost + (MILK_COST * this.milkLevel) + (SUGAR_COST * this.sugarLevel);
+        return totalCost;
     }
 
     /**
@@ -36,6 +38,7 @@ public abstract class Beverage {
      * @param cost Cost to set beverage to.
      */
     public void setCost(double cost) {
+        // Cost cannot be set to a negative value
         if (cost < 0) {
             throw new IllegalArgumentException("Cost cannot be negative");
         }
@@ -63,6 +66,7 @@ public abstract class Beverage {
      * @param milkLevel  Milk level (0-3) to set.
      */
     public void setMilkLevel(int milkLevel) {
+        // Check for valid milk levels
         if (milkLevel < 0 || milkLevel > 3) {
             throw new IllegalArgumentException("milkLevel needs to be between 0-3");
         }
@@ -74,6 +78,7 @@ public abstract class Beverage {
      * @param sugarLevel  Sugar level (0-3) to set.
      */
     public void setSugarLevel(int sugarLevel) {
+        // Check for valid sugar levels
         if (sugarLevel < 0 || sugarLevel > 3) {
             throw new IllegalArgumentException("sugarLevel needs to be between 0-3");
         }

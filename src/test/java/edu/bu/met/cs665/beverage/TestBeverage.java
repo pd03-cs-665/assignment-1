@@ -72,4 +72,10 @@ public class TestBeverage {
         MockBeverage mockBeverage = new MockBeverage();
         mockBeverage.setSugarLevel(10);
     }
+
+    @Test
+    public void testGetDescriptionSuccess() {
+        MockBeverage mockBeverage = new MockBeverage();
+        assertEquals(mockBeverage.getDescription(), "Mock Beverage");
+    }
 }

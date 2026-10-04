@@ -15,7 +15,6 @@ style:
 submit:
 	git archive -o "$$(basename "$$PWD").zip" HEAD
 
-
 start:
 	@make build
 	mvn exec:java

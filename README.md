@@ -8,7 +8,7 @@
 
 # Assignment Overview
 
-This assignment is an implementation of an automatic "beverage vending machine" that utilizes basic concepts of inheritance to represent types of drinks. Each drink can have milk and sugar level adjusted from levels 0 to 3, with prices reflected accordingly.
+This assignment is an implementation of an automatic "beverage vending machine" that utilizes basic concepts of inheritance to represent types of drinks. Each drink can have milk and sugar level adjusted from levels 0 to 3, with prices reflected accordingly for different levels.
 
 # GitHub Repository Link
 
@@ -20,7 +20,7 @@ This assignment is an implementation of an automatic "beverage vending machine" 
 
 This implementation of a beverage vending machine is flexible, as it utilizes benefits of inheritance and implementation. If a new beverage type should be added, there is already a base `Tea.java` or `Coffee.java` that the addition can inherit from. Both those bases extends from a generic `Beverage.java` that contains the data contract for generic traits of a beverage.
 
-For example, if we want to add a matcha drink `Matcha.java`, we will extend `Tea.java`. The requirements that this child must declare is the base cost `setCost()` and override `getDescription()` method with the appropriate string representation. All other calculations, like milk and sugar level, is already implemented once in `Beverage.java` and therefore already exists on this new matcha class.
+For example, if we want to add a matcha drink `Matcha.java`, we will extend `Tea.java`. The requirements that this child must override `getDescription()` method with the appropriate string representation. Further, because each drink will have a different base cost, the child can call `setCost()` on initialization. All other calculations, like milk and sugar level, is already implemented once in `Beverage.java` and therefore already exists on this new matcha class.
 
 > Discuss the simplicity and understandability of your implementation, ensuring that it is easy for others to read and maintain.
 
@@ -52,6 +52,10 @@ Additionally, this lack of rewritten code is important if we wish to make a chan
 > If applicable, mention any design patterns you have used and explain why they were chosen.
 
 No design patterns are used for this first assignment.
+
+## UML Diagram
+
+![uml](/uml/uml.svg)
 
 # Maven Commands
 

@@ -17,6 +17,10 @@ public abstract class Beverage {
     private int milkLevel;
     private int sugarLevel;
 
+    /**
+     * Abstract method to get beverage string representation.
+     * @return Beverage description.
+     */
     public abstract String getDescription();
 
     /**

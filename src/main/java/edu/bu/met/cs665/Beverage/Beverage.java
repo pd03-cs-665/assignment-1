@@ -29,7 +29,9 @@ public abstract class Beverage {
      */
     public double getCost() {
         // Calculate total using base cost and how much milk and sugar is added
-        double totalCost = this.cost + (MILK_COST * this.milkLevel) + (SUGAR_COST * this.sugarLevel);
+        double totalCost = this.cost
+            + (MILK_COST * this.milkLevel)
+            + (SUGAR_COST * this.sugarLevel);
         return totalCost;
     }
 

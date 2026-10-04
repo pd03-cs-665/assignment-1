@@ -13,7 +13,7 @@ style:
 	mvn checkstyle:check
 
 submit:
-	git archive -o "$$(basename "$$PWD").zip" HEAD
+	git archive -o "laya-dang-$$(basename "$$PWD").zip" HEAD
 
 start:
 	@make build

@@ -3,3 +3,4 @@ target
 JavaProjectTemplate.iml
 *.zip
 .DS_Store
+*.bkp

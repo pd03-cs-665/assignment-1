@@ -112,9 +112,9 @@ public class Main {
     public static void customizeBeverage(Beverage beverage) {
         System.out.println(ANSI_BOLD + "Customize your " + beverage.getDescription() + ANSI_RESET);
 
-        System.out.println("How much milk would you like? (0-3): ");
+        System.out.print("How much milk would you like? (0-3): ");
         int milkLevel = getLevel();
-        System.out.println("How much sugar would you like? (0-3): ");
+        System.out.print("How much sugar would you like? (0-3): ");
         int sugarLevel = getLevel();
 
         beverage.setMilkLevel(milkLevel);
@@ -126,7 +126,7 @@ public class Main {
         System.out.println("    " + beverage.getMilkLevel() + "x Milk");
         System.out.println("    " + beverage.getSugarLevel() + "x Sugar");
         System.out.printf("Subtotal     $%.2f%n", beverage.getCost());
-        System.out.println("--------------------");
+        System.out.println(ANSI_BOLD + "--------------------" + ANSI_RESET);
         System.out.println();
 
         if (beverage instanceof Coffee) {
